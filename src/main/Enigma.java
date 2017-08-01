@@ -6,7 +6,6 @@
 package main;
 
 import java.util.Scanner;
-import java.util.function.Consumer;
 import modelo.Modelo;
 import modelo.QampA;
 
@@ -32,7 +31,7 @@ public class Enigma {
                 System.out.print("Option: ");
                 try {
                     option = Integer.parseInt(sc.nextLine());
-                    //System.out.print((option <= 0 || option > 4) ?  "Número fuera de rango... Inténtalo de nuevo": "La respuesta es: ");
+                    System.out.print((option <= 0 || option > 4) ?  "Número fuera de rango... Inténtalo de nuevo": "La respuesta es: ");
                 } catch (NumberFormatException e){
                     System.out.println("Not a number... Try again.");
                     error = true;
