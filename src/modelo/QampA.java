@@ -30,8 +30,8 @@ public class QampA {
         fourOptions = new ArrayList<>();
     }
     
-    public boolean isCorrect(String option){
-        return answer.equals(option);
+    public String isCorrect(String option){
+        return answer.equals(option) ? "Correcta" : "Incorrecta";
     }
 
     public void setSubject(String subject) {
