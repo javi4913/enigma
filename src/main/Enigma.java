@@ -24,16 +24,17 @@ public class Enigma {
         Scanner sc = new Scanner(System.in);
         m.getQuestions().forEach((QampA q) -> {
             int option = 0;
+            String s = q.toString();
             boolean error;
             do{       
                 error = false;
-                System.out.println(q.toString());
-                System.out.print("Option: ");
+                System.out.println(s);
+                System.out.print("Opción: ");
                 try {
                     option = Integer.parseInt(sc.nextLine());
-                    System.out.print((option <= 0 || option > 4) ?  "Número fuera de rango... Inténtalo de nuevo": "La respuesta es: ");
-                } catch (NumberFormatException e){
-                    System.out.println("Not a number... Try again.");
+                    System.out.print(option <= 0 || option > 4 ? "Número fuera de rango...\n":"La respuesta es: ");
+                } catch(NumberFormatException e){
+                    System.out.println("Por favor, introduzca un número...");
                     error = true;
                 }
             } while(error || option <= 0 || option > 4);
